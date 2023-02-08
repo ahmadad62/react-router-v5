@@ -16,14 +16,14 @@ function App() {
           <NavLink to="/about">About</NavLink>
           <NavLink to="/products">Products</NavLink>
           <NavLink to="/contact">Contact</NavLink>
-          <NavLink to="/articles">Articles</NavLink>
+          <NavLink to="/articles/1">Articles</NavLink>
         </nav>
         <Switch>
           <Route exact path="/" component={Home} />
           <Route path="/about" component={About} />
           <Route path="/products/:id" component={ProductDetails} />
           <Route path="/products" component={Products} />
-          <Route path="/contact/?name=monk" component={Contact} />
+          <Route path="/contact*" component={Contact} />
           <Route path="/articles/:id" component={ArticlePage} />
           <Route path="*">
             <Redirect to="/" />  

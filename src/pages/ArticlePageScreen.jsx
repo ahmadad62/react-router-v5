@@ -17,6 +17,7 @@ export default function ArticlePageScreen() {
 
   return (
     <>
+    <h2>Hi user</h2>
       {isPending && <h2>Loading...</h2>}
       {error && <h2>{error}</h2>}
       <div>Article - {id}</div>
