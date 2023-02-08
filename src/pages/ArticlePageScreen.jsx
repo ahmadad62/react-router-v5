@@ -6,6 +6,7 @@ export default function ArticlePageScreen() {
   const { id } = useParams(); //params.id -- And what this does is, it give us a parameter object and on that object will be any route parameters from the URL on this specific page. So it will look at the URL and it will see that we have an ID parameter.
   const url = `http://localhost:8000/articles/${id}`;
   const { data: article, isPending, error } = useFetch(url);
+  
   const history = useHistory()
   useEffect(() => {
     if (error) {
